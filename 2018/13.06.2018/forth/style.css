@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+@keyframes moveSection {
+  8% {transform: translate();}
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 35vw;
+  background: cyan;
+  width: 50vw;
+
+  overflow: hidden;
+  margin: 35vw 40vw 0 40vw;
+}
+
+img {
+  width: 100vw;
+  height: 30%;
+  animation: moveSection 5s linear alternate infinite;
+
+}

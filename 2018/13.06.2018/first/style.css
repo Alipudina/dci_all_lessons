@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  border: 1px solid black;
+  display: grid;
+  grid: repeat(10, 5vw) / repeat(5,1fr);
+  grid-gap: 2vw 1vw;
+  grid-template-areas:  'header header header header header'
+                        'header header header header header'
+                        'header header header header header'
+                        'nav nav nav nav nav'
+                        'aside section section section first'
+                        'aside section section section first'
+                        'aside section section section second'
+                        'aside article article paragraph paragraph'
+                        'footer footer footer footer footer'
+                        'footer footer footer footer footer';
+}
+header {
+  background: black;
+  grid-area: header;
+
+}
+
+nav {
+  background: lime;
+  grid-area: nav;
+}
+
+
+aside {
+  background: red;
+  grid-area: aside;
+}
+
+section {
+  background: cyan;
+  grid-area: section;
+}
+
+div.first {
+  background: yellow;
+  grid-area: first;
+}
+
+div.second {
+  background: brown;
+  grid-area: second;
+}
+
+article {
+  background: purple;
+  grid-area: article;
+}
+
+p {
+  background: green;
+  grid-area: paragraph;
+}
+
+footer {
+  background: blue;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    display: grid;
+    grid-gap: 2vw 1vw;
+    grid: repeat(12, 15vw) / repeat(5, 1fr);
+    grid-template-areas:  'header header header header header'
+                          'header header header header header'
+                          'header header header header header'
+                          'nav nav nav nav nav'
+                          'aside aside aside aside aside'
+                          'section section section section section'
+                          'first first first first first'
+                          'second second second second second'
+                          'article article article article article'
+                          'paragraph paragraph paragraph paragraph paragraph'
+                          'footer footer footer footer footer'
+                          'footer footer footer footer footer';
+  }
+}
+
+@media screen and (max-width: 327px) {
+  main {
+    display: grid;
+    grid-gap: 2vw 1vw;
+    grid: repeat(12, 28vw) / repeat(5, 1fr);
+    grid-template-areas:  'header header header header header'
+                          'header header header header header'
+                          'header header header header header'
+                          'nav nav nav nav nav'
+                          'aside aside aside aside aside'
+                          'section section section section section'
+                          'first first first first first'
+                          'second second second second second'
+                          'article article article article article'
+                          'paragraph paragraph paragraph paragraph paragraph'
+                          'footer footer footer footer footer'
+                          'footer footer footer footer footer';
+  }
+}
+
+@media screen and (max-width: 184px) {
+  main {
+    display: grid;
+    grid-gap: 2vw 1vw;
+    grid: repeat(12, 35vw) / repeat(5, 1fr);
+    grid-template-areas:  'header header header header header'
+                          'header header header header header'
+                          'header header header header header'
+                          'nav nav nav nav nav'
+                          'aside aside aside aside aside'
+                          'section section section section section'
+                          'first first first first first'
+                          'second second second second second'
+                          'article article article article article'
+                          'paragraph paragraph paragraph paragraph paragraph'
+                          'footer footer footer footer footer'
+                          'footer footer footer footer footer';
+  }
+}

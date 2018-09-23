@@ -1,0 +1,47 @@
+div {
+  border: 1px solid black;
+  margin: 2vw 0;
+  text-align: center;
+  background-color: lime;
+}
+
+.grid {
+  height: 5vw;
+  background-color: cyan;
+}
+
+.jumbotron .row div:nth-of-type(1) {
+  background-color: red;
+}
+
+.jumbotron .row div:nth-of-type(2) {
+  background-color: yellow;
+}
+
+.jumbotron .row div:nth-of-type(3) {
+  background-color: grey;
+}
+
+.jumbotron .row div:nth-of-type(1) {
+  background-color: red;
+}
+
+.jumbotron .row div:nth-of-type(2) {
+  background-color: yellow;
+}
+
+.jumbotron .row div:nth-of-type(3) {
+  background-color: grey;
+}
+
+.jumbotron .row div:nth-of-type(1) {
+  background-color: red;
+}
+
+.jumbotron .row div:nth-of-type(2) {
+  background-color: yellow;
+}
+
+.jumbotron .row div:nth-of-type(3) {
+  background-color: grey;
+}

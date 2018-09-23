@@ -1,0 +1,28 @@
+div {
+  border: 1px solid black;
+  margin: 2vw 0;
+  text-align: center;
+  background-color: lime;
+}
+
+.grid {
+  height: 5vw;
+  background-color: cyan;
+}
+
+.jumbotron {
+
+  .row {
+
+    @for $y from 1 through 3 {
+
+      div {
+    @each $num, $bg_color in (1, red), (2,yellow), (3, grey) {
+      &:nth-of-type(#{$num}) {
+        background-color: $bg_color;
+        }
+      }
+    }
+  }
+}
+}

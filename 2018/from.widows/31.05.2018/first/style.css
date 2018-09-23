@@ -1,0 +1,79 @@
+body {
+background: cyan;
+}
+
+button {
+  background: orange;
+  font-size: 2.2vw;
+  padding: 1.5vw 1vw;
+  color: red;
+  border: 1px solid red;
+  border-radius: 0.8vw;
+}
+
+button::after {
+  content: 'Click me and see what happen';
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: yellow;
+  margin-top: 50px;
+  transition: all 3s linear;
+}
+
+button:focus + div {
+  margin-left: 300px;
+  margin-top: 200px;
+  /* opacity: 0; */
+  background: purple;
+}
+
+@media screen and (max-width: 568px)  {
+  body {
+    text-align: center;
+  }
+
+  button {
+    background: green;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    font-size: 4vw;
+  }
+
+  section {
+    background: green;
+  }
+
+}
+
+section {
+  width: 30vw;
+  height: 8vw;
+  background: pink;
+  margin: 9vw;
+  transition: width 2s, height 12s;
+  text-align: center;
+  padding-top: 5vw;
+}
+
+button:hover ~ section {
+  width: 46vw;
+  height: 20vw;
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 4vw;
+  text-align: center;
+  padding-top: 9vw;
+}

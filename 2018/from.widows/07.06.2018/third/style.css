@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  background: blue;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1.8vw 2.2vw;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+li {
+  order: 1;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+nav img {
+  margin: 1.5vw 0;
+  height: 5vw;
+  /* order: 1;
+  flex-grow: 1; */
+}
+
+a:hover {
+  background: yellow;
+}
+
+
+section {
+  color: white;
+  width: 100%;
+  height: 50vw;
+  display: flex;
+  background-image: url('../../imagesss/hamburg3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section h3 {
+  color: red;
+  font-size: 6.5vw;
+  font-family: jokerman;
+  opacity: 0;
+  transition: opacity 0.5s linear 1s;
+}
+
+section article {
+  font-size: 3vw;
+  font-family: helvetica;
+  font-size: 5vw;
+  color: blue;
+  opacity: 0;
+  transition: opacity 0.7s linear;
+}
+
+button {
+  width: 15vw;
+  padding: 0.7vw;
+  background: green;
+
+  font-size: 3vw;
+}
+
+section button:focus ~ * {
+  opacity: 1;
+  outline: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+}
+
+main img {
+  border-radius: 50%;
+  width: 45vw;
+  height: 35vw;
+}
+
+div {
+  text-align: center;
+}
+
+div h2,div h4 {
+  margin: 2vw 0;
+}
+
+header {
+  font-size: 5vw;
+  text-align: center;
+  margin: 2.5vw 0;
+  font-weight: 900;
+}
+
+footer {
+  display: flex;
+  background-image: url('../../imagesss/car.jpg');
+  background-repeat: no-repeat;
+  margin: 0 auto 3vw auto;
+  background-size: cover;
+  width: 80vw;
+  height: 50vw;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+footer p {
+  font-size: 3vw;
+  font-weight: 600;
+  padding: 2.5vw;
+  background: lime;
+  opacity: 0;
+  transition: opacity 0.7s linear 0.8s;
+}
+
+footer:hover > p {
+  opacity: 1;
+}

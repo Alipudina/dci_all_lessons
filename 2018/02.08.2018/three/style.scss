@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+
+
+        li {
+          list-style-type: none;
+          padding: 2vw 2vw;
+          background: {
+            position: center center;
+            repeat: no-repeat;
+            size: 75% 75%;
+          }
+
+          @each $pos, $team in (1, computer),
+          (2, cycle), (3, index), (4, tinter), (5, something),
+          (6, paper), (7, images), (8, images) {
+           &:nth-of-type(#{$pos}) {
+             background-image: url(#{$team}.jpeg);
+             @if $team == mainz {
+               display: none;
+             }
+           }
+         }
+     }
+ }
+}

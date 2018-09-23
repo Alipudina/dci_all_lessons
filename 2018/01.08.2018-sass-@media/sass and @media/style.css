@@ -1,0 +1,36 @@
+/* $pink_color: #E80FCO;
+
+
+ section {
+  $font_base: 1.5vw;
+}
+
+p {
+  font-size: $font_base;
+}
+
+h3 {
+  font-size: $font_base * 3;
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div {
+  border: 1px solid black;
+  background: lime;
+}
+
+div:first-of-type {
+  width: 80vw;
+  height: 16vw;
+  background: cyan;
+}
+
+div:nth-of-type(2) {
+  height: 12vw;
+  width: 78vw;
+  background: yellow;
+}

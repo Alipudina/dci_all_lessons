@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>HTML-Form - Day 8</title>
+  <meta name="description" content="Best practice example for a well structured HTML form">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <h1>HTML Forms</h1>
+  <a href="https://haunschild.de/2016/inklusive-formulare/">Accessible Forms (german language)</a>
+  <p><strong>Just fill in your name and your message.</strong> All other fields are optional.
+    Feel free to give us your address if you want some freebies send by post.</p>
+  <!-- If you don't want that the browsers are validating the
+       form, you can switch it off by using the attribute
+       "novalidate" in the opening form tag.
+       Then you shuld provide a validation yourself (for example
+       with a javascript) -->
+  <form action="#">
+    <!-- I made the experience that for nearly any layout you need a container
+        for label and input to achieve design goals -->
+    <p>The fields with an asterisk (*) are required fields</p>
+    <fieldset>
+      <legend>Personal Data</legend>
+      <div class="text-container">
+        <!-- a label logically connected to the input field vis "for" and "id" attributes -->
+        <label for="first_name">first name *</label>
+        <!-- A simple text input needs no attributes, type="text" is default -->
+        <input id="first_name" required placeholder="Max">
+      </div>
+      <div class="text-container">
+        <!-- a label logically connected to the input field vis "for" and "id" attributes -->
+        <label for="family_name">family name</label>
+        <!-- A simple text input needs no attributes, type="text" is default -->
+        <input id="family_name" placeholder="Mustermann">
+      </div>
+      <!-- fieldsets are containers for fields that belong together -->
+      <fieldset>
+        <!-- a legend is the title of a fieldset
+            the combination of fieldset and title make it for people
+            and software easier to understand web forms -->
+        <legend>Please tell us your gender</legend>
+        <div class="radio-container">
+          <!-- A radio button -->
+          <input id="male" type="radio" name="sex">
+          <!-- a label logically connected to the radio button -->
+          <label for="male">male</label>
+        </div>
+        <div class="radio-container">
+          <input id="female" type="radio" name="sex">
+          <label for="female">female</label>
+        </div>
+      </fieldset>
+      <div class="number-container">
+        <label for="age">age</label>
+        <!-- a field of type number only accepts natural numbers -->
+        <input id="age" type="number" min="0" max="150">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Contact Data</legend>
+      <fieldset>
+        <legend>Postal Address</legend>
+        <div class="select-container">
+          <label for="state">Federal state (select one or more items)</label>
+          <select multiple>
+            <option value="bw">Baden-Württemberg</option>
+            <option value="by">Bayern</option>
+            <option value="hh">Hamburg</option>
+            <option value="nrw">Nordrhein Westfalen</option>
+          </select>
+        </div>
+        <div class="text-container">
+          <label for="street">street</label>
+          <input id="street">
+        </div>
+        <div class="text-container">
+          <label for="zip-code">zip-code</label>
+          <!-- with the "pattern" attribute you can check for complex
+               patterns. Use regular expressions to find out, if the
+               user was giving data, that can be the data you expect.
+               Be generous with the things you accept. It is easy to
+               extract 5 cifres from a string with a script on a server
+               so you should accept in this example things like 12345 or
+               D12345 or "d - 12345". These all are common ways for germans
+               to write a zip code.
+               The easier it is for a user to fill in the data, the more
+               likely it is, that he will. The more difficult it is, the
+               more won't send the form at all.
+               If you want data, make it easy to provide it! -->
+          <input id="zip-code" pattern="^(?:[Dd]\s*[-–—]?\s*)?[0-9]{5}$" placeholder="12345">
+        </div>
+        <div class="text-container">
+          <label for="city">city</label>
+          <input id="city">
+        </div>
+      </fieldset>
+      <div class="email-container">
+        <label for="email">email</label>
+        <!-- when u use fild of type email, the browser checks if the text inside could be an email address -->
+        <input id="email" type="email">
+      </div>
+    </fieldset>
+    <div class="textarea-container">
+      <label for="message">your message for us</label>
+      <textarea id="message">
+        </textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- Add your site or application content here -->
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+</body>
+
+</html>

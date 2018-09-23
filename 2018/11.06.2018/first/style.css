@@ -1,0 +1,39 @@
+
+section, div, p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 40vw;
+}
+
+section > * {
+  flex-basis: 25vw;
+  background: lime;
+  height: 10vw;
+}
+
+section > div:nth-of-type(odd) {
+  background: cyan;
+  flex-shrink: 2;
+}
+
+section > :not(div) {
+  background: red;
+  flex-shrink: 0;
+}
+
+section > div:nth-of-type(even) {
+  font-size: 2.5vw;
+}
+
+/* section > div:nth-of-type(7) {
+  align-self: flex-end;
+} */

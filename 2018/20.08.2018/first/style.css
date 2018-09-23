@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body nav {
+  display: flex;
+  border: 1px solid black;
+  height: 8vw;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-items: center;
+}
+
+body nav a {
+  text-decoration: none;
+  border: 1px solid black;
+}

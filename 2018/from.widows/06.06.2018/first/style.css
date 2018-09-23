@@ -1,0 +1,39 @@
+
+:root {
+  --mycolor: cyan;
+  /* for creating my own name color */
+}
+
+h2 {
+  background-color: var(--mycolor);
+  margin-top: 9vw;
+  text-align: center;
+}
+
+i {
+  background-color: red;
+  width: 15%;
+  text-align: center;
+}
+
+section {
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  background-color: lime;
+  border: 3px solid black;
+  margin: 2vw auto;
+  display: flex;
+  justify-content: center;
+}
+
+section > i {
+  transition: all 0.5s linear 0.5s;
+}
+
+pre:hover ~ section > i {
+  background: radial-gradient(red 20%,yellow 50%,grey 20%);
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+}

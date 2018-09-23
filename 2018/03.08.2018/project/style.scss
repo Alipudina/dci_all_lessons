@@ -1,0 +1,219 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+    nav {
+      position: fixed;
+      background-color: grey;
+      width: 100%;
+      top: 0;
+
+
+      ul {
+        margin: 1vw auto;
+        display: flex;
+        justify-content: center;
+        li {
+          list-style-type: none;
+          padding: 1vw;;
+          border: 1px solid darkgrey;
+          margin: 0 .6vw;
+
+            &:hover {
+              background: darkgrey;
+              cursor: pointer;
+            }
+        }
+      }
+    }
+
+    // started
+      //   div.test {
+      //     ul {
+      //       margin: 1vw auto;
+      //       display: flex;
+      //       justify-content: center;
+      //       li {
+      //         list-style-type: none;
+      //         padding: 1vw;;
+      //         border: 1px solid darkgrey;
+      //         margin: 0 .6vw;
+      //
+      //           &:hover {
+      //             background: darkgrey;
+      //             cursor: pointer;
+      //
+      //
+      //             @media and screen (max-height: 20px) {
+      //               position: fixed;
+      //               top: 0;
+      //               left: 0;
+      //             }
+      //           }
+      //       }
+      //   }
+      // }
+    // finished
+
+
+      section.background1 {
+        background-image: url('lifeguard.jpg');
+        height: 40vw;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: blue;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5vw 0;
+
+
+        h2 {
+          margin: 6vw 0;
+          font-size: 4vw;
+        }
+
+        }
+
+
+
+      main {
+        display: flex;
+        justify-content: center;
+
+        div {
+          margin: 0 1vw;
+          width: 25vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            width: 25vw;
+            height: 15vw;
+          }
+
+          p {
+            font-size: 1.5vw;
+          }
+
+          @each $button, $color in (1, green),
+                (2, #6672E8), (3, #FF3587) {
+                  &:nth-of-type(#{$button}) {
+                    button {
+                      background: $color;
+                      padding: .6vw;
+                      color: white;
+                      display: inline-block;
+                      border: none;
+                      border-radius: 1vw;
+
+                      &:hover {
+                        background: darken($color, 20%);
+                        padding: .7vw;
+                        cursor: pointer;
+                      }
+                    }
+
+
+                  }
+                }
+        }
+      }
+
+      div.twoImages {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vw;
+
+        div {
+          width: 35vw;
+          margin: 0 2vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            width: 35vw;
+            height: 20vw;
+          }
+
+          p {
+            font-size: 1.5vw;
+          }
+
+          button {
+            align-self: flex-end;
+            background: #ACFFB3;
+            padding: .5vw;
+            border: 1px solid #8A2EE8;
+            border-radius: 1vw;
+
+            &:hover {
+              background: darkgrey;
+              padding: .6vw;
+            }
+          }
+        }
+      }
+
+      article.background2 {
+        background-image: url('colorado.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        height: 50vw;
+        text-align: center;
+        color: red;
+
+        h3, p {
+          padding: 5vw 8vw 0 8vw;
+        }
+      }
+
+
+      div.container {
+        display: flex;
+        justify-content: center;
+
+        div {
+          margin: .7vw;
+          width: 22vw;
+
+          @each $number, $display, $justify, $column in (1, flex, center, one),
+            (2, flex, center, two), (3, flex, center, three), (4, flex, center, four) {
+              &:nth-of-type(#{$number}) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                  &:after {
+                    content: (' #{$column}');
+                  }
+                }
+
+                p {
+                  font-size: 1.5vw;
+                  width: 20vw;
+                }
+              }
+            }
+        }
+
+        img {
+          width: 22vw;
+          height: 25vw;
+        }
+      }
+
+      footer {
+        background-image: url('canyon.jpg');
+        background-size: 100% 100%;
+        height: 50vw;
+        background-attachment: fixed;
+      }
+}

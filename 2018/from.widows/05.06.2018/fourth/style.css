@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  font-family: Tagerine;
+  font-size: 4vw;
+}
+
+h3 + article {
+  font-size: 1.4vw;
+  font-family: monospace;
+  margin-top: 50px;
+  column-count: 3;
+  column-gap: 35px;
+  column-rule: 4px double red;
+  column-fill: balance;
+  padding: 0 3vw;
+}

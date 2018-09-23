@@ -1,0 +1,15 @@
+var SCWBase = {
+
+	// focus on search
+	run: function () {
+		$(".focus").focus();
+		var tmpStr = $(".focus").val();
+		$(".focus").val('');
+		$(".focus").val(tmpStr);		
+	}	
+}
+
+
+$(document).ready( function () {
+	SCWBase.run();
+});

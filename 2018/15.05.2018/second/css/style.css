@@ -1,0 +1,35 @@
+* {
+    color: green;
+}
+body {
+    background-color: yellow;
+}
+p {
+    color: blue;
+    font-family: Arial, Helvetica;
+    font-style: oblique;
+}
+nav li:first-child {
+    color: black;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 25px; 
+}
+button {
+    background: cyan;
+}
+
+button:hover {
+background: red;   
+font-size: 20px; 
+}
+h1 {
+    text-align: center;
+    background: pink;
+    overflow: hidden;
+}
+main span {
+    color: red;
+}

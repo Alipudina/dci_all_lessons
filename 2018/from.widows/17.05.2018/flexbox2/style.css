@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: cyan;
+}
+
+article  {
+    position: relative;
+    width: 10em;
+}
+
+main article:first-of-type {
+    background: yellow;
+}
+
+main article:nth-of-type(2) {
+    background: blue;
+    margin: 15px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.text {
+    padding: 5px;
+    margin: 50px;
+    
+
+}
+.container  {
+    display: flex;
+    justify-content: space-between;
+    text-align: 
+  }
+  .container p{
+      margin-top: auto;
+
+  }

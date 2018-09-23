@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+body nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+body nav li {
+  list-style-type: none;
+  padding: 2vw 2vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+}
+
+body nav li:nth-of-type(1) {
+  background-image: url(computer.jpeg);
+}
+
+body nav li:nth-of-type(2) {
+  background-image: url(cycle.jpeg);
+}
+
+body nav li:nth-of-type(3) {
+  background-image: url(index.jpeg);
+}
+
+body nav li:nth-of-type(4) {
+  background-image: url(tinter.jpeg);
+}
+
+body nav li:nth-of-type(5) {
+  background-image: url(something.jpeg);
+}
+
+body nav li:nth-of-type(6) {
+  background-image: url(paper.jpeg);
+}
+
+body nav li:nth-of-type(7) {
+  background-image: url(images.jpeg);
+}
+
+body nav li:nth-of-type(8) {
+  background-image: url(images.jpeg);
+}

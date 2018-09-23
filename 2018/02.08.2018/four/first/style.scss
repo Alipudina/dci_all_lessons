@@ -1,0 +1,33 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$green_bg: green;
+$puma: puma;
+
+section.#{$puma} {
+  background: $green_bg;
+}
+
+div {
+  border: 1px solid black;
+  background: lime;
+  $width: 80vw;
+  $height: 12vw;
+  $ratio: 20 / 100;
+
+  &:first-of-type {
+    width: 80vw;
+    height: $width * ($ratio);
+    background: cyan;
+  }
+
+&:nth-of-type(2) {
+  height: $height;
+  width: $height * 6.5;
+  background: yellow;
+}
+}

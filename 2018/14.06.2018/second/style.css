@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top a {
+  width: 7vw;
+  height: 10vw;
+  display: block;
+  display: flex;
+  text-decoration: none;
+}
+
+#top a i {
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: cyan;
+  height: 10vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: lime;
+  align-items: center;
+  height: 10vw;
+}
+
+article {
+  background: pink;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a i {
+  display: block;
+  padding-left: 0.5vw;
+}
+
+nav a {
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  background: none;
+}
+nav a i:hover {
+  color: red;
+  font-size: 7.7vw;
+}
+
+main {
+display: grid;
+grid-gap: 1vw 0.7vw;
+grid: repeat(15, 7vw) / repeat(2, 1fr);
+grid-template-areas: 'first first'
+                      'first first'
+                      'first first'
+                      'first first'
+                      'second third'
+                      'second third'
+                      'second third'
+                      'second third'
+                      'second third'
+                      'second third'
+                      'second third'
+                      'forth forth'
+                      'forth forth'
+                      'forth forth'
+                      'forth forth';
+
+/* grid-template-areas: 'first first first first first first first first first first'
+                     'first first first first first first first first first first'
+                     'first first first first first first first first first first'
+                     'first first first first first first first first first first'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'second second second second second third third third third third'
+                     'forth forth forth forth forth forth forth forth forth forth'
+                     'forth forth forth forth forth forth forth forth forth forth'
+                     'forth forth forth forth forth forth forth forth forth forth'
+                     'forth forth forth forth forth forth forth forth forth forth'; */
+}
+
+.first {
+  background: pink;
+  grid-area: first;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 12vw;
+}
+
+.second {
+  background: green;
+  grid-area: second;
+}
+
+.third {
+  background: yellow;
+  grid-area: third;
+}
+
+.forth {
+  background: red;
+  grid-area: forth;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: lime;
+}
+
+.upward {
+  font-size: 6vw;
+  margin: 2vw;
+}
+
+img {
+  width: 30vw;
+  height: 30vw;
+}
+
+div {
+  display: flex;
+  background: skyblue;
+  justify-content: space-around;
+}
+
+.upward:hover {
+  font-size: 6.7vw;
+  color: red;
+}

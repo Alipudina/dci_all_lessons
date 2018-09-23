@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  counter-reset: myNumber;
+}
+
+article::before {
+  counter-increment: myNumber;
+  content: 'Box no' counter(myNumber);
+}
+
+article:nth-child(1) {
+  background: cyan;
+}
+
+article:nth-child(2) {
+  background: red;
+}
+
+article:nth-child(3) {
+  background: cyan;
+}
+
+article:nth-child(4) {
+  background: blue;
+}
+
+article:nth-child(5) {
+  background: yellow;
+}
+
+article:nth-child(6) {
+  background: green;
+}
+
+article:nth-child(7) {
+  background:
+}
+
+article:nth-child(8) {
+  background: pink;
+}
+
+article:nth-child(9) {
+  background: grey;
+  flex-grow: 4;
+}
+
+
+
+article {
+  text-align: center;
+  width: 10%;
+  padding: 2% 1%;
+  /* flex-shrink: 1; */
+  flex-grow: 1;
+}
+
+section {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}

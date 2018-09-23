@@ -1,0 +1,67 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  div.container {
+    border: 1px solid black;
+    display: grid;
+    grid-template: repeat(4, 3vw) / repeat(5, 1fr);
+    grid-gap: 2vw 1vw;
+    grid-template-areas: 'first first first first first'
+                          'second second second third third'
+                          'fourth fourth fourth fourth fourth'
+                          'fifth fifth fifth fifth fifth';
+
+      div {
+        border: 1px solid black;
+        text-align: center;
+        padding: 1.5vw;
+        font-size: 4vw;
+        font-weight: 700;
+        color: white;
+        font-family: jokerman;
+
+
+      // div.box1 {
+      //   grid-area: first;
+      //   background: red;
+      // }
+      //
+      // div.box2 {
+      //   grid-area: second;
+      //   background: cyan;
+      // }
+      //
+      // div.box3 {
+      //   grid-area: third;
+      //   background: yellow;
+      // }
+      //
+      // div.box4 {
+      //   grid-area: fourth;
+      //   background: lime;
+      // }
+      //
+      // div.box5{
+      //   grid-area: fifth;
+      //   background: grey;
+      // }
+      //
+
+
+
+
+          @each $num, $area, $bg in (1, first, red), (2, second, cyan),
+                    (3, third, yellow), (4, fourth, lime),
+                    (5, fifth, grey) {
+                      &:nth-of-type(#{$num}) {
+                        grid-area: $area;
+                        background: $bg;
+                      }
+                    }
+
+    }
+  }
+}

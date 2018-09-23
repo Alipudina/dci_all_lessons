@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  nav {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      border: 1px solid black;
+      display: block;
+      text-decoration: none;
+      padding: 2vw;
+      color: red;
+
+      &:first-of-type {
+        margin-right: auto;
+      }
+      $mr: margin-right;
+      $ml: margin-left;
+
+      @each $num, $margin in (1, 2vw), (2, 2vw),
+              (3, 2vw), (4, 3vw) {
+
+                &:nth-of-type(#{$num}) {
+                  @if #{$num} == 1 {
+                    #{$ml}: $margin;
+                  }
+
+                  else {
+                    #{$mr}: $margin;
+                  }
+                }
+              }
+    }
+  }
+}
+
+
+// -------------------------------------------------------------------
+// make our own classes
+@for $i from 1 through 10 {
+  .font-size-#{$i} {
+    font-size: ($i / 2) + vw;
+  }
+}

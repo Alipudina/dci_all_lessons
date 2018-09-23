@@ -1,0 +1,118 @@
+
+body {
+  margin: 0;
+
+  main {
+    width: 90%;
+    border: 5px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5vw auto;
+
+
+    section {
+      text-align: center;
+
+      div {
+        margin: 0 4.19vw;
+        width: 20vw;
+        height: 13vw;
+        background: {
+          repeat: norepeat;
+          size: 100% 100%;
+          position: center center;
+      }
+    }
+  }
+
+
+    section:nth-of-type(1) {
+
+      h4 {
+        &:after {
+          content: 'desktops';
+        }
+      }
+
+      div {
+        background-image: url(computer.jpeg);
+      }
+
+      span {
+        &:before {
+          content: 'Only 12 ';
+        }
+
+      }
+    }
+
+
+
+    section:nth-of-type(2) {
+
+      h4 {
+        &:after {
+          content: 'notebooks';
+        }
+      }
+
+      div {
+        background-image: url(cycle.jpeg);
+      }
+
+      span {
+        &:before {
+          content: 'Only 18 ';
+        }
+
+  }
+}
+
+
+
+section:nth-of-type(3) {
+
+  h4 {
+    &:after {
+      content: 'notebooks';
+    }
+  }
+
+  div {
+    background-image: url(something.jpeg);
+  }
+
+  span {
+    &:before {
+      content: 'Only 1 ';
+    }
+
+    &:after {
+      content: ' Take yours now!';
+    }
+
+}
+}
+
+
+section:nth-of-type(4) {
+
+  h4 {
+    &:after {
+      content: 'notebooks';
+    }
+  }
+
+  div {
+    background-image: url(images.png);
+  }
+
+  span {
+    &:before {
+      content: 'Only 23 ';
+    }
+}
+}
+
+  }
+  }

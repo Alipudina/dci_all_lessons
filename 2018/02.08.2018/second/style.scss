@@ -1,0 +1,23 @@
+nav {
+  background: skyblue;
+
+  li {
+    list-style-type: none;
+  }
+
+  @for $list_name from 1 to 11 {
+    li:nth-of-type(#{$list_name}) {
+      font-size: 1vw * $list_name;
+      background: rgba(48, 49, 255, $list_name / 10);
+      width: $list_name * 10 + %;
+      &:after {
+        content: '#{$list_name}';
+            // if here we put just the $list_name then it will be just a string.
+      }
+    }
+  }
+}
+
+section {
+  color: white;
+}

@@ -1,0 +1,117 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    list-style-type: none;
+    padding: 2vw 0;
+    font-weight: 900;
+    background: cyan;
+    font-size: 2.2vw;
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+
+// started
+    &:first-of-type {
+      animation: mylist 8s ease alternate infinite;
+      position: relative;
+
+
+         @keyframes mylist {
+     6% {position: relative; top: 0; left: 0; background: red;}
+     25% {position: relative; top: 0; left: 20%; background: red;}
+     50% {position: relative; top: 0; left: 40%; background: red;}
+     75% {position: relative; top: 0; left: 60%; background: red;}
+     100% {position: relative; top: 0; left: 80%; background: red;}
+     0% {position: relative; top: 0; left: 0; background: red;}
+   }
+    }
+
+
+    &:nth-of-type(2){
+      animation: mylist2 8s ease alternate infinite;
+      position: relative;
+
+
+      @keyframes mylist2 {
+  6% {position: relative; top: 0; left: 0; background: blue;}
+  25% {position: relative; top: 0; left: -20%; background: blue;}
+  50% {position: relative; top: 0; left: -20%; background: blue;}
+  75% {position: relative; top: 0; left: -20%; background: blue;}
+  100% {position: relative; top: 0; left: -20%; background: blue;}
+  0% {position: relative; top: 0; left: 0; background: blue;}
+}
+    }
+
+    &:nth-of-type(3) {
+      position: relative;
+      animation: mylist3 8s ease alternate infinite;
+    }
+
+    @keyframes mylist3 {
+6% {position: relative; top: 0; left: 0; background: pink;}
+25% {position: relative; top: 0; left: 0; background: pink;}
+50% {position: relative; top: 0; left: -20%; background: pink;}
+75% {position: relative; top: 0; left: -20%; background: pink;}
+100% {position: relative; top: 0; left: -20%; background: pink;}
+0% {position: relative; top: 0; left: 0; background: pink;}
+}
+
+    &:nth-of-type(4) {
+      position: relative;
+      animation: mylist4 8s ease alternate infinite;
+    }
+
+    @keyframes mylist4 {
+6% {position: relative; top: 0; left: 0; background: yellow;}
+25% {position: relative; top: 0; left: 0; background: yellow;}
+50% {position: relative; top: 0; left: 0; background: yellow;}
+75% {position: relative; top: 0; left: -20%; background: yellow;}
+100% {position: relative; top: 0; left: -20%; background: yellow;}
+0% {position: relative; top: 0; left: 0; background: yellow;}
+}
+
+
+&:nth-of-type(5) {
+  position: relative;
+  animation: mylist5 8s ease alternate infinite;
+}
+
+@keyframes mylist5 {
+6% {position: relative; top: 0; left: 0; background: lime;}
+25% {position: relative; top: 0; left: 0; background: lime;}
+50% {position: relative; top: 0; left: 0; background: lime;}
+75% {position: relative; top: 0; left: 0; background: lime;}
+100% {position: relative; top: 0; left: -20%; background: lime;}
+0% {position: relative; top: 0; left: 0; background: lime;}
+}
+
+
+// till here
+    &:nth-of-type(even) {
+      background: lime;
+    }
+
+    @media screen and (max-width: 700px) {
+      font-size: 3vw;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #9895FF;
+      font-size: 2.3vw;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    }
+}

@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+header {
+  border: 1px solid black;
+  background: #9EA693;
+}
+
+img {
+  height: auto;
+}
+
+header img {
+  width: 25%;
+  height: auto;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: top;
+  color: black;
+  font-size: 5vw;
+  margin-left: 7vw;
+  margin-top: 2.7vw;
+  font-family: helvetica;
+}
+
+nav {
+  background: cyan;
+  text-align: center;
+}
+
+nav li {
+  font-size: 3vw;
+  display: inline-block;
+  padding: 2.1vw 1vw;
+  color: white;
+  font-family: helvetica;
+  transition: all 0.5s linear;
+}
+
+nav li:hover {
+  background: black;
+  color: cyan;
+}
+
+section {
+  text-align: center;
+  background: pink;
+  border-top: 2px solid black;
+}
+
+section h3 {
+  font-size: 4vw;
+  background: cyan;
+  margin: 0.7vw 0;
+}
+
+section article {
+  font-size: 2.5vw;
+  padding: 2vw;
+}
+
+section img {
+  width: 45%;
+}
+
+.village {
+  border-bottom: 2px solid black;
+}
+
+
+body {
+  text-align: center;
+}
+
+
+button {
+  display: none;
+  font-size: 2.5vw;
+  background: green;
+}
+
+
+
+
+@media screen and (max-width: 555px) {
+  button {
+    display:inline;
+  }
+
+  a {
+    display: none;
+  }
+}
+
+button:focus ~ nav a {
+  display: block;
+}

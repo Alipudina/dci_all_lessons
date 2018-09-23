@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>My Form</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- do not forget to learn about parallex effect !-->
+
+<h1>HTML Forms</h1>
+<p><strong>Just fill in your namenad your message.</strong> All other fields are optional.
+   Feel free to give us your address if you want some freebies send by post.</p>
+   <form action="#">
+     <p>The fields with an asteriks(*) is required fields.</p>
+     <fieldset>
+        <legend>Personal Data</legend>
+        
+        <label for="first_name">First name*</label><br />
+        <input id="first_name"  required placeholder="Max"><br />
+
+        <label for="family_name">Family name*</label><br />
+        <input id="family_name" required placeholder="mustermann"
+     </fieldset>
+     <fieldset>
+       <legend>Please tell us your gender</legend>
+       <input id="male" type="radio" name="sex"><label for="male">male</label> <br />
+       <input id="female" type="radio" name="sex"><label for="female">female</label><br />
+       <label for="age">Age</label><br />
+       <input id="age" type="number" min="0" max="150">
+     </fieldset>
+
+     <fieldset>
+       <legend>Contact Data</legend>
+       <fieldset>
+         <legend>Postall Address</legend>
+         <label for="state">Federal state (select one or more items) </label><br />
+         <select multiple>
+            <option value="bw">Baden-Württemberg</option>
+            <option value="by">Bayern</option>
+            <option value="hh">Hamburg</option>
+            <option value="nw">Nordhein Westfalen</option>
+         </select><br />
+
+          <label for="street">Street</label><br />
+          <input id="street"><br />
+          <label for="zip-code">Zip-code</label><br />
+          <input id="zip-code" pattern=".{5,}" title="five or more characters" placeholder="12345"><br />
+          <label for="city">City</label><br />
+          <input id="city"> 
+       </fieldset>
+          <label for="email">Email</label><br />
+          <input id="email" placeholder="example@gmail.com"><br />
+          <label>Your message for us</label><br />
+          <textarea></textarea><br />
+          <button type="submit">Submit</button>
+     </fieldset>
+   </form>
+
+
+
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

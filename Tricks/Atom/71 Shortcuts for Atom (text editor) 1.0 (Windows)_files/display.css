@@ -1,0 +1,756 @@
+
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-color: #EEF9DF;
+}
+
+body {
+   /* fallback/image non-cover color */
+   background-repeat:  repeat-x; 
+   background-image: url('/images/body_gradient.png');
+   background-attachment: fixed !important;
+}
+
+h1, h2, h3, p, li, ul, ol, a, table, div {
+	font-family: Segoe UI, Tahoma, sans-serif;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+p {
+	font-size: .8em;
+	line-height: 1.3em;
+}
+
+a, a:visited {
+	color: #444;
+}
+
+a:hover {
+	background: #CDE3BF;
+	cursor:pointer;	
+}
+
+a.no_underline {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+h2, h3 {
+	font-size: .8em;
+	font-weight: bold;
+}
+
+li {
+	line-height: 1.3em;
+}
+
+img {
+	border-style: none;
+	vertical-align: middle;
+}
+
+img.fav_active {
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+img.fav_inactive {
+	vertical-align: bottom;
+}
+
+td, th {
+	color: #444;
+}
+
+/* 	---------------------------------------------------------------------------- 
+	Global Classes
+----------------------------------------------------------------------------- */	
+	.avoidwrap {
+		white-space: nowrap;
+	}
+	
+	.align_right {
+		text-align: right;
+	}
+
+	.hidden {
+		display:none;
+	}
+
+/* 	---------------------------------------------------------------------------- 
+	Main Page Layout
+----------------------------------------------------------------------------- */	
+
+	.page_wrapper {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+		.page_wrapper table.wrapper {
+			width: 99%;
+			border-spacing: 0;
+			table-layout:fixed;	
+		}
+
+			.page_wrapper td.hspacer { /* Navigation Width */
+				width: 225px;
+				vertical-align: bottom;
+			}
+
+			.page_wrapper td.navigation {
+				background-color:#fefefe;	
+				padding: 10px 0px 0px 10px;
+				white-space: nowrap;	
+				-moz-border-radius: 10px 0px 0px 10px;
+			    	-webkit-border-radius: 10px 0px 0px 10px;
+			    	-o-border-radius: 10px 0px 0px 10px;
+			    	-khtml-border-radius: 10px 0px 0px 10px;
+			    	border-radius: 10px 0px 0px 10px;
+
+				border-top: 1px solid #999;
+				border-left: 1px solid #999;
+				border-bottom: 1px solid #999;
+				border-right: none;
+			}
+
+
+			.page_wrapper td.content  {
+				background-color:#fefefe;
+				padding: 0px 20px 40px 30px;
+				min-height: 600px;
+				overflow: hidden;
+				-moz-border-radius: 0px 10px 10px 0px;	
+			    	-webkit-border-radius: 0px 10px 10px 0px;	
+			    	-o-border-radius: 0px 10px 10px 0px;	
+			    	-khtml-border-radius: 0px 10px 10px 0px;	
+			    	border-radius: 0px 10px 10px 0px;
+		    	
+				border-top: 1px solid #999;
+				border-right: 1px solid #999;
+				border-bottom: 1px solid #999;
+				bottom-left: none;
+			}
+		
+			.page_wrapper td.context_menu {
+				padding: 0px 0px 0px 3%;
+				margin: 0px;
+				height: auto;
+
+			}
+		
+			.page_wrapper td.footer {
+				padding: 5px 0px 20px 0px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+/* 	---------------------------------------------------------------------------- 
+	Header with Logo
+	----------------------------------------------------------------------------- */	
+	.page_header {
+		margin-top: 15px;
+		position: relative;
+		float: left;
+		width: 98%;
+	}
+
+		.page_header .header_logo {
+			position: relative;
+			float: left;
+			padding-left: 15px;
+
+		}
+		
+		.page_header .header_logo a:hover {
+			background: inherit;
+		}
+	
+		.page_header .header_text {
+			display: block;
+			width: 448px;
+			text-align: right;
+			color: #444;
+			font-size: .8em;
+
+		}
+		
+		.page_header .header_ad {
+			padding-top: 30px;
+			float: right;
+		}
+
+/* 	---------------------------------------------------------------------------- 
+	Context Menu
+----------------------------------------------------------------------------- */	
+
+	/* wrap context menu in table for line breaks */
+	table.contextmenu_wrapper {
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+	
+	.context_menu .menu_group {
+		margin-right: 8px;
+		float: left;
+	}
+
+	.context_menu .vspacer {	/* div above context menu */
+		height: 35px;
+	}
+	
+	.context_menu a, .context_menu p {
+		line-height: 26px;
+		text-decoration: none;		
+		white-space: nowrap;
+	}
+	
+	.context_menu a {
+		color: #3a7134;
+		font-size: 0.8em;
+	}
+	
+	.context_menu p {
+		color: #444;
+	}
+
+		.context_menu .item {
+			padding-left: 10px; 
+			padding-right: 10px;
+			border-style: solid;
+			border-color: #999;
+			border-width: 1px 0px 0px 1px;
+			-moz-border-radius: 8px 8px 0px 0px;
+	    	-webkit-border-radius: 8px 8px 0px 0px;
+	    	-o-border-radius: 8px 8px 0px 0px;
+	    	-khtml-border-radius: 8px 8px 0px 0px;
+	    	border-radius: 8px 8px 0px 0px;
+			float: left;
+		}
+	
+	
+			.context_menu .item:last-child {
+		    	border-left: 1px solid #999;
+		    	border-right: 1px solid #999;
+			}
+			
+			.context_menu .item:only-child {
+		    	border-top: 1px solid #999;
+		    	border-right: 1px solid #999;
+		    	border-left: 1px solid #999;	    	
+			}	
+
+		.context_menu .link {
+			background-color:#cde3bf;
+		}
+	
+			.context_menu .link:hover {
+				background: #CDE3BF;
+			}	
+
+		.context_menu .active {
+			background-color:#fefefe;
+			line-height: 26px;
+			font-size: .8em;
+		}
+
+	.context_menu .account_info {
+		margin-right: 20px;
+		float: right;
+	}
+
+	.context_menu .account_info a {
+		text-decoration: underline;
+			color: #444;
+			display: inline;
+			padding: 0;
+			font-size: inherit;		
+	}
+
+	.context_menu .account_info a:hover {
+		background-color: inherit;
+	}
+		
+		.context_menu .account_info p {
+			font-size: .8em;
+			color: #444;	
+		}
+
+
+/* 	---------------------------------------------------------------------------- 
+	Left Navigation
+----------------------------------------------------------------------------- */	
+
+	.navigation a,
+	.navigation p {
+		display: block;
+		text-decoration: none;
+		vertical-align: middle;
+		color: #444;
+	}
+
+	.navigation li,
+	.navigation li.heading {
+		font-size: .8em;
+		list-style: none;
+		padding: 2px 12px 2px 8px;
+		margin: 0px 10px 0px 15px;
+		border-right: 1px solid #aaa;;
+		border-left: 1px solid #aaa;;
+	}
+
+	.navigation li.nav_highlight {
+		font-weight: bold;
+
+	}
+
+	.navigation .nav_extra_highlight a {
+		color: #990000;
+		font-weight: 500;
+	}
+
+	.navigation li:last-child {
+		border-bottom: 1px solid #aaa;
+		padding-bottom: 4px;
+	}
+	
+		.navigation li:hover {
+			background: #CDE3BF;
+		}
+		
+		
+	
+	.navigation li.heading	 {
+		margin-top: 15px; 
+		border: 1px solid #aaa;
+		padding-bottom: 2px;
+		background-color: #CDE3BF;	
+		color: #444;
+	}
+	
+
+		.navigation li.strong {
+			background: #c7FA03;
+			border-bottom: 1px solid #519548;			
+		}
+		
+
+
+		/*search*/
+
+			 .navigation .search {
+				text-align: left;
+				margin-top: 10px;
+			}
+
+				#search_box {
+					height: 18px;
+					width: 148px;
+					font-size: .8em;
+					padding-left: 8px;
+					margin-left: 15px;
+					border-style: solid;
+					border-color: #aaa ;
+					border-width: 1px 0px 1px 1px;
+					vertical-align: bottom;		    	
+				}
+				
+				 .navigation .search a {
+				 	display: inline;
+				 }
+				 
+				/* overwrite background hover */
+				 .navigation .search a:hover {
+					background: none;
+				}
+	
+				.navigation #search_submit:hover {
+					cursor: pointer;
+				}
+				
+				 .navigation #search_submit {
+					color: #444;			
+					background: #f5f5f5;
+					border-style: solid;
+					border-color: #aaa;
+					border-width: 1px;
+					margin-top: 3px;
+					vertical-align: bottom;
+					height: 20px;
+					width: 32px;
+			    	padding: 2px 9px 2px 7px;
+					background-image: url('/images/search.png');
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+
+
+/* 	---------------------------------------------------------------------------- 
+	Content
+----------------------------------------------------------------------------- */	
+
+	.content .vspacer {
+		height: 25px;
+	}
+
+	.content {
+		clear: left;
+	}
+	
+    .content h1 {
+    	display: block;
+		padding: 0px 0px 5px 5px;
+		margin: 0px 0px 5px -5px;
+    	border-bottom: 1px #aaa	 solid;
+		width: 96%;
+
+    }
+
+	.content .intro { /* page intro */
+		padding-top: 15px;
+		display: block;
+		width: 90%;
+	}
+
+		/* Page Info and Options on Display Pages below title */	
+		.content table.page_info_options {
+			width: 95%;
+			padding: 0px 15px 5px 0px;
+	    }    
+
+			.content .page_info_options a:hover {
+				background: inherit;
+			}    	
+
+    
+	 	/* Table of Content */
+	    .content h2 {
+			margin: 20px 0px 5px 0px;
+	    }
+	
+	    .content ol,
+	    .content ul {
+	    	font-size: .8em ;
+			margin: 5px 0px 10px 0px;
+			clear: left;
+	    }
+	
+		    .content ul {
+		    	list-style: square;
+		    }
+		    
+		    .content li {
+		    	margin-left: 25px;
+		    	line-height: 1.2em;
+		    	margin-top: 3px;
+		    }
+
+		/* Keyboard Style */
+	    .content span.kbd {
+	    	-webkit-border-radius: 4px;
+	    	-moz-border-radius: 4px;
+	    	-o-border-radius: 4px;
+	    	-khtml-border-radius: 4px;
+	    	border-radius: 4px;
+	    	border-style: outset;
+	    	border: 1px solid #aaa;
+	    	background: #fafafa;
+	    	padding: 0px 3px 1px 3px;
+			margin: 0px 0px 0px 0px;
+	    	vertical-align: baseline;
+	    	line-height: 1.8em;
+	    	white-space: nowrap;
+	    }
+
+
+ 		/* Shortcut Tables */	    
+	    .content table.category {
+	    	font-size: 0.8em;
+			border: 1px solid #ccc;		
+	    	border-collapse: collapse;
+	    	background: #f8f8f8;
+	    }
+
+				.content table.main {
+			    	width: 90%;
+			    	margin-left: 0%;
+					margin-top: 15px;
+					margin-bottom: 15px;					
+				}
+
+				.content table.sub {
+			    	width: 88%;
+					padding-left: 2%;
+					margin-left: 2%;
+					margin-top: -5px;					
+					margin-bottom: 20px;					
+				}   
+
+		    .content table.category td,
+		    .content table.category th {		    
+		    	padding: 2px 4px 2px 8px;
+		    	text-align: left;
+		    	vertical-align: middle;
+		    	height: 30px;			    	
+			}
+
+			    .content table.category th {		    
+			    	font-weight: bold;
+					border-bottom: 1px solid #ccc;		
+				}		
+			
+			.content table.category tr:nth-child(2n) {
+		    	background: #fff;
+			}
+
+		    .content td.shortcut {
+		    	width: 35%;
+		    }
+
+
+ 		/* Table Helper */
+	    .content .plus_minus {
+	    	text-align: right;
+			padding: 0;
+			float: right;
+		}
+
+		    .content .plus_minus img {
+		    	vertical-align: middle;
+		    	padding-bottom:2px;
+		    	padding-right: 2px;
+		    }
+
+			.expand {
+				display: none;
+			}
+	
+		    .content .goto_top {
+				float: right;
+				height: 15px;
+				color: #519548;
+				padding-top: 3px;
+				margin-right: 5%;
+				text-align: right;
+		    }
+    
+		/* empty links no background */
+		.content a.blank:hover {
+			background: none;
+			cursor:pointer;
+			
+		}	
+	
+		.collapse, .expand, .goto_top, #show_all, #hide_all {
+			cursor:pointer;
+		}
+		    
+/* 	---------------------------------------------------------------------------- 
+	Footer
+----------------------------------------------------------------------------- */	
+	.footer a {
+		color: #444;
+		text-decoration: none;
+	}
+	
+	.footer a:hover {
+		background: inherit;
+		color: inherit;
+	}
+	
+	.footer .tou {
+		text-decoration:underline;
+	}
+	
+	
+/* 	---------------------------------------------------------------------------- 
+	Clean Up!!
+----------------------------------------------------------------------------- */	
+	
+/* For Applist Manager
+---------------------------------------------------------------------------- */	   
+		.highlighted { 
+			display: inline-block;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		
+		
+	a.signature { 
+		font-family: Monotype Corsiva, MV Boli, Comic Sans MS;
+		color: black;
+		padding-right: 5px;
+		text-decoration: none;
+		font-size: 1.4em;
+	}	
+	
+	
+	/* 	Post Info for various board styles, used for 'mandatory field'. 
+		other stdform are in interactive 
+	--------------------------------------------------------- */		
+		.content .stdform .supplemental {
+			font-style: italic;
+			font-size: .8em;
+			color: #3a7134;							
+		}
+
+	/* Messages
+	---------------------------------------------------------------------------- */	   
+	.content .msg_error,
+	.content .msg_ok {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 5px 20px 5px 10px;
+		display: inline-block;
+		overflow: auto;
+	}
+
+		.content .msg_error {
+			border: 1px solid red;
+			background-color: MistyRose;
+		}
+
+		.content .msg_ok {
+			border: 1px solid green;
+			background-color: LightGreen;
+		}
+
+	.italic {
+		font-style: italic;
+	}
+	
+			em {
+			font-weight: bold;
+		}
+
+
+
+	
+	/* ToC & Add Units
+	---------------------------------------------------------------------------- */	   
+	.toc {
+		width: 90%;
+	}
+	
+		.toc .toc_body {
+			padding-bottom: 10px;
+			display: inline-block;
+			vertical-align: top;
+			padding-right: 10px;
+			padding-top: 10px;
+		}
+	
+		#toc_ad {
+			margin-top: 80px;
+			display: inline-block;		
+			color: #444;		
+			width: 40%;
+		}
+	
+			.toc #toc_ad .sponsor_head {
+				background-color: #CDE3BF;			
+				border: 1px solid #aaa;		
+				padding: 2px 5px 2px 5px;
+				display: block;	
+			}
+			
+			.toc #toc_ad .sponsor_body {
+				display: block;	
+				padding: 14px 10px 10px 10px; ;
+				border-left: 1px solid #aaa;
+				border-right: 1px solid #aaa;
+				border-bottom: 1px solid #aaa;				
+			}	
+
+			.toc #toc_ad .sponsor_body li {
+				line-height: 1.4em;
+			}				
+			
+			.toc #toc_ad .sponsor_body ul {
+				margin-top: 7px;
+			}					
+
+	.google_plus {
+		float: right;
+	}
+	
+	
+	.content .table-top-note {
+		clear: left;
+		width: 90%;
+		text-align: right;
+	}
+	
+	.content .table-top-note a {
+		text-decoration: underline;
+	}	
+	
+	pre {
+		white-space: pre-wrap;
+	}
+	
+	.content .upper p {
+		line-height: 1.5em;
+	}
+	
+	.content .upper {
+		display: table;
+		width: 95%;
+	}
+	
+	.content .upper_left {
+		display: table-cell;
+	}	
+
+	.content .upper_right {
+		display: table-cell;
+		text-align: right;
+	}	
+	
+	.content .upper .standout {
+		color: #3a7134;
+		font-weight: 600;
+	}
+
+	
+	h1 {
+		float: left;
+	}
+	
+	h1 a, h1 a:visited {
+		color: #3a7134;
+	}
+	
+	.content_body {
+		clear: both;
+	}
+
+
+	.red {		
+		color: #990000;
+		font-weight: 500;
+	}
+
+	.standout {
+		color: #3a7134;
+	}
