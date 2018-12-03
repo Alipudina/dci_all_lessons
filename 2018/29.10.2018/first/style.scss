@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   body {
+      div {
+        display: flex;
+        width: 50vw;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 5vw auto;
+        // overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 30vw;
+            flex-shrink: 0;
+        }
+        span {
+            position: absolute;
+            top: 12vw;
+            z-index: 1;
+            color: yellow;
+            font-size: 5vw;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .rArrow {
+            right: 0;
+        }
+      }
+  }

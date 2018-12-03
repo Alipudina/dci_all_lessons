@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+ /* start working on navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 4.5vw;
+    align-items: center;
+    z-index: 3;
+
+    h3 {
+      padding: 1.5vw;
+
+      &:hover {
+        cursor: pointer;
+        background: rgba(0,0,0,0.7);
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        list-style-type: none;
+        padding: 1.5vw;
+
+        &:hover {
+          cursor: pointer;
+          background: rgba(0,0,0,0.6);
+        }
+
+        &:nth-of-type(5) {
+          padding-right: 2.5vw;
+          position: relative;
+
+          span {
+            position: absolute;
+            top: 0.5vw;
+            right: .5vw;
+            font-size: 2vw;
+          }
+        }
+
+      }
+    }
+  }
+
+  div.toggle {
+    width: 10vw;
+    position: fixed;
+    z-index: 4;
+    color: white;
+    top: 4.5vw;
+    right: 4.43vw;
+    padding: .5vw 1vw;
+    margin: 0;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+
+    p {
+      letter-spacing: .28vw;
+      font-size: 1.2vw;
+      margin: 0;
+      padding: .25vw;
+    }
+  }
+ /* finished navbar */
+
+
+  /* main started */
+ main.container {
+   display: flex;
+   align-items: center;
+   position: relative;
+   top: 4.4vw;
+   overflow: hidden;
+
+   div.image {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     width: 100%;
+     height: 110%;
+     flex-shrink: 0;
+     transition: transform 2s linear;
+
+     img {
+       width: 100%;
+       height: 100%;
+     }
+
+     h5, p {
+       position: absolute;
+       color: white;
+       background: grey;
+     }
+
+     h5 {
+       font-size: 2vw;
+       top: 70%;
+     }
+
+     p {
+       font-size: 1.5vw;
+       position: absolute;
+       top: 85%;
+     }
+
+   }
+
+   div.dotContainer {
+     display: flex;
+     flex-direction: row;
+     top: 92%;
+     left: 48%;
+     position: absolute;
+     font-size: 3vw;
+     z-index: 2;
+
+     span {
+       padding: 0 .3vw;
+       font-weight: 900;
+     }
+
+
+   }
+
+   div.arrows {
+     font-size: 3.5vw;
+     position: absolute;
+     z-index: 2;
+     display: flex;
+     flex-direction: row;
+     color: red;
+     border: 1px solid yellow;
+     color: black;
+     background: rgba(0, 0, 0, .7);
+     border-radius: 50%;
+
+     &:hover {
+       cursor: pointer;
+       font-size: 3.6vw;
+       color: red;
+     }
+
+     .leftArrow {
+       position: absolute;
+         left: 10vw;
+         background: white;
+         border-radius: 50%;
+     }
+
+     .rightArrow {
+       position: absolute;
+         right: -90vw;
+         background: rgba(0, 0, 0, .3);
+         border-radius: 50;
+         background: white;
+         border-radius: 50%;
+     }
+
+   }
+ }
+
+ .whiteColor {
+   color: white;
+ }
+ /* main finished */
+
+
+ /* band article started */
+ article {
+   margin-top: 4vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+
+   h3 {
+     font-size: 2vw;
+     margin-top: 5vw;
+     padding: 1vw;
+     letter-spacing: .4vw;
+   }
+
+   p {
+      font-size: 1.2vw;
+      line-height: 1.8;
+      letter-spacing: .1vw;
+      margin: 0;
+      opacity: .7;
+
+    &:last-of-type {
+      width: 45%;
+      margin: 1vw 0;
+    }
+   }
+ }
+ /* band article finished */
+
+
+ /* three Names section started */
+ section {
+   display: flex;
+   justify-content: space-between;
+   width: 70%;
+   margin: 0 auto;
+   margin-bottom: 10vw;
+   border: 2px solid cyan;
+
+   div {
+     width: 25%;
+     border: 1px solid red;
+     text-align: center;
+     opacity: .8;
+     height: 100%;
+
+     h4 {
+       margin: 3vw 0;
+       font-size: 1.6vw;
+     }
+
+     img {
+       width: 100%;
+       height: 70%;
+       border-radius: 50%;
+       margin-bottom: 2vw;
+     }
+
+     p {
+       width: 65%;
+       margin: 2vw auto;
+       line-height: 1.6;
+       letter-spacing: .1vw;
+       margin-top: 0;
+       height: 0;
+       overflow: hidden;
+       transition: height .5s linear;
+     }
+   }
+ }
+
+ .show {
+   height: 7vw;
+ }
+
+
+}

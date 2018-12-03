@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 150vw;
+}
+
+section {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  background: yellow;
+  border: 1px solid black;
+}
+
+section h3 {
+  color: blue;
+  background: cyan;
+  padding: 2vw;
+  font-size: 3vw;
+  margin: 0;
+  border: 1px solid red;
+}
+
+section p {
+  font-size: 2vw;
+  margin: 0;
+  height: 16.3vw;
+  height: 0;
+  overflow: hidden;
+}
+
+.active {
+  height: 16.3vw;
+}

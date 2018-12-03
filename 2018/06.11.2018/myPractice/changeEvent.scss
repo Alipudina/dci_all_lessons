@@ -1,0 +1,23 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  form {
+    margin: 2vw;
+
+    input, select {
+      padding: 1vw;
+    }
+  }
+
+  div {
+    width: 50%;
+    margin: 3vw auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}

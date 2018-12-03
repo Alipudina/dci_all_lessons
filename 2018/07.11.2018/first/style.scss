@@ -1,0 +1,51 @@
+ section {
+   border: 1px solid black;
+   width: 70%;
+   margin: 5vw auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+
+    input, button {
+      padding: .5vw;
+      font-size: 2vw;
+      margin: 2vw;
+    }
+
+   input {
+     border: 1px solid blue;
+   }
+
+   button {
+     background: lime;
+     border: none;
+   }
+
+ }
+
+ div {
+   display: flex;
+   width: 100%;
+   margin: 2vw 0;
+
+   p {
+     width: 80%;
+     font-size: 2.5vw;
+     padding: 2vw;
+     background: grey;
+     margin: 0;
+   }
+
+   span {
+     width: 20%;
+     background: cyan;
+     font-size: 2.5vw;
+     padding: 2vw;
+
+     &:hover {
+       cursor: pointer;
+     }
+   }
+ }

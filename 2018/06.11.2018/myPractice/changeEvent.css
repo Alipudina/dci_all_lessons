@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body form {
+  margin: 2vw;
+}
+
+body form input, body form select {
+  padding: 1vw;
+}
+
+body div {
+  width: 50%;
+  margin: 3vw auto;
+}
+
+body div img {
+  width: 100%;
+}

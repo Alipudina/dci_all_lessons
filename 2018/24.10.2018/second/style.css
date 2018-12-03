@@ -1,0 +1,99 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 150vw;
+  width: 100%;
+}
+
+main {
+  margin: 15vw auto;
+  font-size: 1.5vw;
+  border: 1px solid black;
+  width: 35%;
+  display: none;
+}
+
+form {
+  position: relative;
+}
+
+form span {
+  position: absolute;
+  top: 1%;
+  left: 93%;
+}
+
+form span:hover {
+  color: red;
+  cursor: default;
+}
+
+main p {
+  text-align: center;
+  color: cyan;
+  letter-spacing: .4vw;
+}
+
+div {
+  display: flex;
+  padding: 1vw;
+}
+
+div legend {
+  color: white;
+}
+
+div input {
+  text-align: center;
+  margin-left: 1vw;
+  font-size: 1vw;
+  opacity: .8;
+  padding: .5vw;
+}
+
+div:first-of-type {
+  margin-top: 1vw;
+}
+
+button {
+  margin: 2vw;
+  font-size: 1.2vw;
+  padding: .3vw .7vw;
+  border: none;
+  border-radius: .3vw;
+  background: lime;
+  cursor: pointer;
+  outline: none;
+}
+
+.active {
+  display: block;
+}
+
+article {
+  box-sizing: border-box;
+  width: 70%;
+  position: relative;
+  top: 8vw;
+  left: 15%;
+  text-align: center;
+  border: 1px solid red;
+}
+
+h3 {
+  margin: 2vw;
+  font-size: 3vw;
+  color: red;
+}
+
+p {
+  font-size: 2vw;
+  color: blue;
+}

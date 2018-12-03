@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    position: relative;
+    top: 15vw;
+    left: 15%;
+}
+
+main {
+  height: 21vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  background: black;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+nav li, nav span {
+  list-style-type: none;
+  padding: 1.5vw;
+  color: white;
+  font-size: 1.5vw;
+  opacity: .6;
+}
+
+nav li:last-of-type {
+  padding-right: 0;
+}
+
+
+
+nav span {
+  padding-left: 0;
+}
+
+div {
+  padding: 3vw 1.5vw;
+  margin: 0;
+  height: 15vw;
+}
+
+div h1, div p {
+  margin: 0;
+}
+
+div p {
+  padding: 1vw 1.5vw;
+}
+
+div:nth-of-type(1) {
+  background: lime;
+}
+
+div:nth-of-type(2) {
+  background: yellow;
+}
+
+div:nth-of-type(3) {
+  background: grey;
+}
+
+div:nth-of-type(4) {
+  background: red;
+}
+
+div:nth-of-type(5) {
+  background: blue;
+}
