@@ -1,0 +1,11 @@
+p {
+  display: none;
+  padding: 3vw;
+  text-align: center;
+  background: lime;
+  font-size: 3vw;
+}
+
+p:first-of-type {
+  display: block;
+}

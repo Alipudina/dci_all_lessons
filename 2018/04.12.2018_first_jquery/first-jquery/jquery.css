@@ -1,0 +1,12 @@
+p {
+  display: none;
+  color: red;
+  background: lime;
+  text-align: center;
+  padding: 3vw 0;
+  font-size: 3vw;
+}
+
+.blue {
+  color: blue;
+}

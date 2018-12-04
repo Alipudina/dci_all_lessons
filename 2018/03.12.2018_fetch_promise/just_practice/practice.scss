@@ -1,0 +1,28 @@
+
+body {
+  margin: 0;
+  text-align: center;
+
+  div {
+    display: inline-block;
+    background: grey;
+    padding: 2vw;
+    margin: 3vw 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lime;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      width: 20vw;
+      height: 15vw;
+      margin: 2vw;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+body div {
+  display: inline-block;
+  background: grey;
+  padding: 2vw;
+  margin: 3vw 0;
+}
+
+body div:hover {
+  cursor: pointer;
+  background-color: lime;
+}
+
+body section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body section img {
+  width: 20vw;
+  height: 15vw;
+  margin: 2vw;
+}
