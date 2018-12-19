@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+body .show {
+  height: 80%;
+}
+
+body div {
+  width: 30%;
+  margin: 0 auto;
+}
+
+body div section {
+  width: 100%;
+  text-align: center;
+  margin: 2vw auto;
+}
+
+body div section h3 {
+  background: cyan;
+  padding: 2vw;
+  margin: 0;
+}
+
+body div section img {
+  width: 100%;
+  height: 100%;
+}
+
+body main {
+  margin: 5vw 0;
+  display: flex;
+  border: 1px solid blue;
+}
+
+body main div {
+  flex-grow: 1;
+}
+
+body main div h4 {
+  background: grey;
+  padding: 1vw;
+  margin: 0;
+}
+
+body main div article {
+  height: 0;
+  overflow: hidden;
+  background: lime;
+  padding: 1vw;
+  border: 1px solid grey;
+  margin: 0;
+  padding: 0;
+  transition: height .7s linear;
+}

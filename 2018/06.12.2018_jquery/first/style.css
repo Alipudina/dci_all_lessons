@@ -1,0 +1,59 @@
+input {
+  margin: 5vw;
+  width: 45vw;
+  font-size: 3.2vw;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  font-family: tahoma;
+  font-size: 2.5vw;
+  padding: 2vw;
+  transition: all 0.5s linear;
+}
+
+form button {
+  background: orange;
+}
+
+button:hover {
+  cursor: pointer;
+  background: black;
+  color: red;
+}
+
+form button:hover {
+  color: orange;
+}
+
+form {
+  margin-bottom: 2vw;
+}
+
+button:focus {
+  outline: none;
+}
+
+section {
+  margin: 0;
+}
+
+section div {
+  background: yellow;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2vw;
+  margin: 3vw 0;
+  padding: 1vw;
+}
+
+.fadeIn {
+  opacity: 1;
+}

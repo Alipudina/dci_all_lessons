@@ -1,0 +1,444 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(pink, yellow);
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body div.animation {
+  border: 16px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 16px solid red;
+  width: 10vw;
+  height: 10vw;
+  animation: circle 1.5s linear infinite;
+  position: fixed;
+  z-index: 2;
+  top: 20vw;
+  right: 4vw;
+}
+
+body div.fixed {
+  height: 15vw;
+  width: 15vw;
+  position: fixed;
+  top: 20vw;
+  right: 4vw;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+body div.fixed div.name {
+  font-size: 2.7vw;
+}
+
+body div.fixed div.icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+body div.social-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vw;
+  position: fixed;
+  top: 20vw;
+  left: -4vw;
+  z-index: 2;
+}
+
+body div.social-icons li {
+  list-style-type: none;
+  width: 2.5vw;
+  height: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+  border-radius: 15%;
+}
+
+body div.social-icons li a i {
+  font-size: 1.5vw;
+  color: white;
+}
+
+body div.social-icons li.facebook {
+  background: #000064;
+}
+
+body div.social-icons li.twitter {
+  background: rgba(0, 0, 255, 0.7);
+}
+
+body div.social-icons li.insta {
+  background: #ff1a1a;
+}
+
+body div.social-icons li.youtube {
+  background: #cc0000;
+}
+
+body div.image-container {
+  border: 1px solid red;
+}
+
+body div.image-container div.image {
+  border: 1px solid blue;
+  width: 20%;
+  margin: 5% auto;
+  border-radius: 50%;
+}
+
+body div.image-container div.image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+body div.image-container div.skills {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body div.image-container div.skills h3 {
+  margin-top: 8vw;
+  font-size: 3vw;
+}
+
+body div.image-container div.skills-container {
+  margin: 0 10%;
+  display: grid;
+  grid-gap: 1vw 0;
+  grid-template: 4vw 1fr;
+  grid: repeat(3, 2.5vw)/repeat(13, 6vw);
+  justify-content: center;
+  grid-template-areas: "html html_skill html_skill html_skill html_skill empty1 space1 english english_skill english_skill english_skill english_skill empty2" "css css_skill css_skill css_skill empty3 empty4 space2 deutsch deutsch_skill deutsch_skill deutsch_skill deutsch_skill empty5" "javascript javascript_skill javascript_skill empty6 empty7 empty8 space3 farsi farsi_skill farsi_skill farsi_skill farsi_skill farsi_skill";
+}
+
+body div.image-container div.skills-container div.html {
+  grid-area: html;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.html_skill {
+  grid-area: html_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.css {
+  grid-area: css;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.css_skill {
+  grid-area: css_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.javascript {
+  grid-area: javascript;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.javascript_skill {
+  grid-area: javascript_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.english {
+  grid-area: english;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.english_skill {
+  grid-area: english_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.deutsch {
+  grid-area: deutsch;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.deutsch_skill {
+  grid-area: deutsch_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.farsi {
+  grid-area: farsi;
+  background: cyan;
+}
+
+body div.image-container div.skills-container div.farsi_skill {
+  grid-area: farsi_skill;
+  background: blue;
+}
+
+body div.image-container div.skills-container div.epmty1 {
+  grid-area: empty1;
+}
+
+body div.image-container div.skills-container div.epmty2 {
+  grid-area: empty2;
+}
+
+body div.image-container div.skills-container div.epmty3 {
+  grid-area: empty3;
+}
+
+body div.image-container div.skills-container div.epmty4 {
+  grid-area: empty4;
+}
+
+body div.image-container div.skills-container div.epmty5 {
+  grid-area: empty5;
+}
+
+body div.image-container div.skills-container div.epmty6 {
+  grid-area: empty6;
+}
+
+body div.image-container div.skills-container div.epmty7 {
+  grid-area: empty7;
+}
+
+body div.image-container div.skills-container div.epmty8 {
+  grid-area: empty8;
+}
+
+body div.image-container div.skills-container div.space1 {
+  grid-area: space1;
+}
+
+body div.image-container div.skills-container div.space2 {
+  grid-area: space2;
+}
+
+body div.image-container div.skills-container div.space3 {
+  grid-area: space3;
+}
+
+body div.image-container div.skills-container div.empty {
+  background: white;
+}
+
+body div.image-container div.skills-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  padding: 0;
+  margin: 0;
+}
+
+body div.city-container {
+  margin: 5vw 0;
+}
+
+body div.city-container div.two-city-container {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+body div.city-container div.two-city-container div.saveh, body div.city-container div.two-city-container div.gorgan {
+  width: 45%;
+  text-align: center;
+}
+
+body div.city-container div.two-city-container div.saveh div.gs-images, body div.city-container div.two-city-container div.gorgan div.gs-images {
+  display: none;
+}
+
+body div.city-container div.two-city-container div.saveh div.gs-images img, body div.city-container div.two-city-container div.gorgan div.gs-images img {
+  width: 30%;
+  height: 28vh;
+}
+
+body div.city-container div.two-city-container div.saveh div.gs-images img:hover, body div.city-container div.two-city-container div.gorgan div.gs-images img:hover {
+  filter: brightness(200%);
+  cursor: pointer;
+}
+
+body div.city-container div.two-city-container div.first-show {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+body div.city-container div.two-city-container div.first-show img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body div.city-container div.two-city-container div.first-show img:hover {
+  cursor: pointer;
+}
+
+body div.city-container div.two-city-container div.first-show p {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  font-size: 2.3vw;
+  font-weight: 700;
+  color: white;
+  opacity: 0;
+}
+
+body div.city-container div.two-city-container div.first-show p:hover {
+  cursor: pointer;
+}
+
+body div.city-container div.image-viewer {
+  width: 70%;
+  margin: 3vw auto;
+}
+
+body div.city-container div.image-viewer img {
+  width: 100%;
+  height: 100%;
+}
+
+body div.form-container {
+  padding-bottom: 5vw;
+  position: relative;
+}
+
+body div.form-container div.two-text {
+  width: 52%;
+  margin: 0 auto;
+  color: white;
+  background: blue;
+}
+
+body div.form-container div.two-text p {
+  margin: 0;
+  padding: 0.3vw 1.4vw;
+}
+
+body div.form-container div.form-flex {
+  display: flex;
+  background: blue;
+  width: 50%;
+  margin: 5vw auto;
+  padding: 1vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5vw;
+}
+
+body div.form-container div.form-flex div.text-container {
+  width: 30%;
+  margin-top: 0.2vw;
+}
+
+body div.form-container div.form-flex div.text-container div {
+  height: 2vw;
+  margin: 0.8vw 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+body div.form-container div.form-flex div.input-container {
+  width: 65%;
+}
+
+body div.form-container div.form-flex div.input-container div {
+  height: 2vw;
+  margin: 0.8vw 0;
+  width: 100%;
+  background: white;
+}
+
+body div.form-container div.form-flex div.input-container div input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body div.form-container div.form-flex div.input-container div.Postcode, body div.form-container div.form-flex div.input-container div.phone {
+  width: 55%;
+}
+
+body div.form-container div.form-flex div.input-container div.comment {
+  margin: 0;
+  border: none;
+  height: 6vw;
+}
+
+body div.form-container div.form-flex div.input-container div.comment input {
+  border: none;
+}
+
+body div.form-container div.button {
+  text-align: center;
+  background: blue;
+  width: 52%;
+  margin: 0 auto;
+}
+
+body div.form-container div.button button {
+  border: none;
+  color: white;
+  background: lime;
+  margin: 1vw;
+  margin-top: 0;
+  font-size: 1.5vw;
+  padding: 0.5vw 0.7vw;
+}
+
+body div.form-container div.button button:hover {
+  cursor: pointer;
+}
+
+body div.form-container div.full-form {
+  position: absolute;
+  text-align: center;
+  top: 15vw;
+  left: 40vw;
+  font-size: 2vw;
+  display: none;
+  color: white;
+  font-weight: 700;
+}
+
+body div.form-container div.full-form p {
+  background: black;
+}
+
+body div.form-container div.full-form button {
+  border: none;
+  background: black;
+  padding: 0.2 1vw 0.3 1vw;
+  font-size: 2vw;
+  color: white;
+  font-weight: 700;
+}
+
+body div.form-container div.full-form button:hover {
+  cursor: pointer;
+}
+
+body div.adding-background {
+  height: 15vw;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}

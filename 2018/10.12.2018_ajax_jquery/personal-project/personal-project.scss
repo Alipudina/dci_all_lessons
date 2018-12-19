@@ -1,0 +1,398 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(pink, yellow);
+
+  $vw: 1vw;
+
+
+// starting error section
+  @keyframes circle {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+  }
+
+  div.animation {
+    border: 16px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top: 16px solid red;
+    width: 10*($vw);
+    height: 10*($vw);
+    animation: circle 1.5s linear infinite;
+    position: fixed;
+    z-index: 2;
+    top: 20*($vw);
+    right: 4*($vw);
+  }
+// finishing error section
+
+// starting weather section
+  div.fixed {
+    height: 15*($vw);
+    width: 15*($vw);
+    // border: 1px solid red;
+    position: fixed;
+    top: 20*($vw);
+    right: 4*($vw);
+    z-index: 2;
+    text-align: center;
+    font-size: 1.5*($vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    div.name {
+      // border: 1px solid black;
+      font-size: 2.7*($vw);
+    }
+
+  div.icon {
+    display: flex;
+    justify-content: space-around;
+    }
+  }
+// finishing weather section
+
+
+// starting working on social-icons
+  div.social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15*($vw);
+    position: fixed;
+    top: 20*($vw);
+    left: -4*($vw);
+    z-index: 2;
+
+    li {
+      list-style-type: none;
+      width: 2.5*($vw);
+      height: 2.5*($vw);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: blue;
+      border-radius: 15%;
+
+      a {
+
+        i {
+          font-size: 1.5*($vw);
+          color: white;
+        }
+      }
+    }
+
+    li.facebook {
+      background: rgb(0,0,100);
+    }
+
+    li.twitter {
+      background: rgba(0,0,300, .7);
+    }
+
+    li.insta {
+      background: lighten(red, 5%);
+    }
+
+    li.youtube {
+      background: darken(red, 10%);
+    }
+  }
+// finishing working on social-icons
+
+// starting first image section and skills section
+ div.image-container {
+   border: 1px solid red;
+
+
+   div.image {
+     border: 1px solid blue;
+     width: 20%;
+     margin: 5% auto;
+     border-radius: 50%;
+
+     img {
+       width: 100%;
+       border-radius: 50%;
+     }
+   }
+
+   div.skills {
+     width: 30%;
+     margin: 0 auto;
+     text-align: center;
+
+     h3 {
+       margin-top: 8*($vw);
+       font-size: 3*($vw);
+     }
+   }
+
+   div.skills-container {
+     // border: 1px solid blue;
+     margin: 0 10%;
+     display: grid;
+     grid-gap: 1*$vw 0;
+     grid-template: 4*$vw 1fr;
+     grid: repeat(3, 2.5*$vw)/ repeat(13, 6*$vw);
+     justify-content: center;
+     // align-content: center;
+     grid-template-areas:
+       "html html_skill html_skill html_skill html_skill empty1 space1 english english_skill english_skill english_skill english_skill empty2"
+       "css css_skill css_skill css_skill empty3 empty4 space2 deutsch deutsch_skill deutsch_skill deutsch_skill deutsch_skill empty5"
+       "javascript javascript_skill javascript_skill empty6 empty7 empty8 space3 farsi farsi_skill farsi_skill farsi_skill farsi_skill farsi_skill";
+
+
+        @each $box, $area, $background in (html, html, cyan), (html_skill, html_skill, blue),
+                                          (css, css, cyan), (css_skill, css_skill, blue),
+                                          (javascript, javascript, cyan), (javascript_skill, javascript_skill, blue),
+                                          (english, english, cyan), (english_skill, english_skill, blue),
+                                          (deutsch, deutsch, cyan), (deutsch_skill, deutsch_skill, blue),
+                                          (farsi, farsi, cyan), (farsi_skill, farsi_skill, blue) {
+
+                              div.#{$box} {
+                                grid-area: $area;
+                                background: $background;
+                              }
+                            }
+
+
+      @for $i from 1 through 8 {
+        div.epmty#{$i} {
+          grid-area: empty#{$i};
+          // background: white;
+        }
+      }
+
+      @for $j from 1 through 3 {
+        div.space#{$j} {
+          grid-area: space#{$j};
+        }
+      }
+
+
+       div.empty {
+         background: white;
+       }
+
+
+     div {
+       // border: 1px solid green;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 1.2*$vw;
+       padding: 0;
+       margin: 0;
+     }
+   }
+ }
+ // finishing the skill section
+
+// starting 2city section
+  div.city-container {
+    margin: 5vw 0;
+
+    div.two-city-container {
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid red;
+
+      div.saveh, div.gorgan {
+        width: 45%;
+        text-align: center;
+
+        div.gs-images {
+          display: none;
+
+          img {
+            width: 30%;
+            height: 28vh;
+
+            &:hover {
+              filter: brightness(200%);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      div.first-show {
+        width: 100%;
+        height: 80%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          // filter: brightness(50%);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        p {
+          position: absolute;
+          top: 35%;
+          left: 30%;
+          font-size: 2.3*$vw;
+          font-weight: 700;
+          color: white;
+          opacity: 0;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    div.image-viewer {
+      width: 70%;
+      margin: 3vw auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+// starting form section
+    div.form-container {
+      padding-bottom: 5*$vw;
+      position: relative;
+
+      div.two-text {
+        width: 52%;
+        margin: 0 auto;
+        color: white;
+        background: blue;
+
+        p {
+          margin: 0;
+          padding: .3*$vw 1.4*$vw;
+        }
+      }
+
+      div.form-flex {
+        display: flex;
+        background: blue;
+        width: 50%;
+        margin: 5*$vw auto;
+        padding: 1*$vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.5*$vw;
+
+        div.text-container {
+          width: 30%;
+          margin-top: .2*$vw;
+
+          div {
+            height: 2*$vw;
+            margin: .8*$vw 0;
+            color: white;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        div.input-container {
+          width: 65%;
+
+          div {
+            height: 2*$vw;
+            margin: .8*$vw 0;
+            width: 100%;
+            background: white;
+
+            input {
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              margin: 0;
+            }
+          }
+
+          div.Postcode, div.phone {
+            width: 55%;
+          }
+
+          div.comment {
+            margin: 0;
+            border: none;
+            height: 6*$vw;
+
+            input {
+              border: none;
+            }
+          }
+        }
+      }
+
+      div.button {
+        text-align: center;
+        background: blue;
+        width: 52%;
+        margin: 0 auto;
+
+        button {
+          border: none;
+          color: white;
+          background: lime;
+          margin: 1*$vw;
+          margin-top: 0;
+          font-size: 1.5*$vw;
+          padding: .5*$vw .7*$vw;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      div.full-form {
+        position: absolute;
+        text-align: center;
+        top: 15*$vw;
+        left: 40*$vw;
+        font-size: 2*$vw;
+        display: none;
+        color: white;
+        font-weight: 700;
+
+        p {
+          background: black;
+        }
+
+        button {
+          border: none;
+          background: black;
+          padding: .2$vw .3$vw;
+          font-size: 2*$vw;
+          color: white;
+          font-weight: 700;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    // addind background space
+    div.adding-background {
+      height: 15*$vw;
+      background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+
+
+}

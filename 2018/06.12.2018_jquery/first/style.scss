@@ -1,0 +1,87 @@
+input {
+  margin: 5vw;
+  width: 45vw;
+  font-size: 3.2vw;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  font-family: tahoma;
+  font-size: 2.5vw;
+  padding: 2vw;
+  transition: all 0.5s linear;
+}
+
+form button {
+  background: orange;
+}
+
+button:hover {
+  cursor: pointer;
+  background: black;
+  color: red;
+}
+
+form button:hover {
+  color: orange;
+}
+
+form {
+  margin-bottom: 2vw;
+}
+
+button:focus {
+  outline: none;
+}
+
+section {
+  margin: 0;
+}
+
+section div {
+  background: yellow;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2vw;
+  margin: 3vw 0;
+  padding: 1vw;
+}
+
+//
+// section {
+//   display:flex;
+//   flex-direction: column;
+// }
+//
+// section {
+//   display: flex;
+//   list-style-type: none;
+//   opacity: 0;
+//   background: deepskyblue;
+//   font-family: helvetica;
+//   font-size: 3.5vw;
+//   text-align: left;
+//   overflow: hidden;
+//   transition: opacity 2s linear;
+//   margin-bottom: 1vw;
+//   justify-content: space-between;
+// }
+//
+// section span {
+//   float: right;
+// }
+//
+// section span {
+//   align-self: center;
+// }
+
+.fadeIn {
+  opacity: 1;
+}
