@@ -1,0 +1,19 @@
+{
+  "name": "dci_all_lessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alipudina/dci_all_lessons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alipudina/dci_all_lessons/issues"
+  },
+  "homepage": "https://github.com/Alipudina/dci_all_lessons#readme"
+}

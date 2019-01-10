@@ -316,24 +316,24 @@ body div.city-container div.image-viewer img {
   height: 100%;
 }
 
-body div.form-container {
+body form.form-container {
   padding-bottom: 5vw;
   position: relative;
 }
 
-body div.form-container div.two-text {
+body form.form-container div.two-text {
   width: 52%;
   margin: 0 auto;
   color: white;
   background: blue;
 }
 
-body div.form-container div.two-text p {
+body form.form-container div.two-text p {
   margin: 0;
   padding: 0.3vw 1.4vw;
 }
 
-body div.form-container div.form-flex {
+body form.form-container div.form-flex {
   display: flex;
   background: blue;
   width: 50%;
@@ -344,12 +344,12 @@ body div.form-container div.form-flex {
   font-size: 1.5vw;
 }
 
-body div.form-container div.form-flex div.text-container {
+body form.form-container div.form-flex div.text-container {
   width: 30%;
   margin-top: 0.2vw;
 }
 
-body div.form-container div.form-flex div.text-container div {
+body form.form-container div.form-flex div.text-container div {
   height: 2vw;
   margin: 0.8vw 0;
   color: white;
@@ -357,46 +357,50 @@ body div.form-container div.form-flex div.text-container div {
   align-items: center;
 }
 
-body div.form-container div.form-flex div.input-container {
+body form.form-container div.form-flex div.input-container {
   width: 65%;
 }
 
-body div.form-container div.form-flex div.input-container div {
+body form.form-container div.form-flex div.input-container div {
   height: 2vw;
   margin: 0.8vw 0;
   width: 100%;
   background: white;
 }
 
-body div.form-container div.form-flex div.input-container div input {
+body form.form-container div.form-flex div.input-container div input {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
-body div.form-container div.form-flex div.input-container div.Postcode, body div.form-container div.form-flex div.input-container div.phone {
+body form.form-container div.form-flex div.input-container div input::placeholder {
+  color: red;
+}
+
+body form.form-container div.form-flex div.input-container div.Postcode, body form.form-container div.form-flex div.input-container div.phone {
   width: 55%;
 }
 
-body div.form-container div.form-flex div.input-container div.comment {
+body form.form-container div.form-flex div.input-container div.comment {
   margin: 0;
   border: none;
   height: 6vw;
 }
 
-body div.form-container div.form-flex div.input-container div.comment input {
+body form.form-container div.form-flex div.input-container div.comment input {
   border: none;
 }
 
-body div.form-container div.button {
+body form.form-container div.button {
   text-align: center;
   background: blue;
   width: 52%;
   margin: 0 auto;
 }
 
-body div.form-container div.button button {
+body form.form-container div.button button {
   border: none;
   color: white;
   background: lime;
@@ -406,11 +410,11 @@ body div.form-container div.button button {
   padding: 0.5vw 0.7vw;
 }
 
-body div.form-container div.button button:hover {
+body form.form-container div.button button:hover {
   cursor: pointer;
 }
 
-body div.form-container div.full-form {
+body form.form-container div.full-form {
   position: absolute;
   text-align: center;
   top: 15vw;
@@ -421,11 +425,11 @@ body div.form-container div.full-form {
   font-weight: 700;
 }
 
-body div.form-container div.full-form p {
+body form.form-container div.full-form p {
   background: black;
 }
 
-body div.form-container div.full-form button {
+body form.form-container div.full-form button {
   border: none;
   background: black;
   padding: 0.2 1vw 0.3 1vw;
@@ -434,7 +438,7 @@ body div.form-container div.full-form button {
   font-weight: 700;
 }
 
-body div.form-container div.full-form button:hover {
+body form.form-container div.full-form button:hover {
   cursor: pointer;
 }
 

@@ -265,7 +265,7 @@ body {
   }
 
 // starting form section
-    div.form-container {
+    form.form-container {
       padding-bottom: 5*$vw;
       position: relative;
 
@@ -318,6 +318,10 @@ body {
               height: 100%;
               padding: 0;
               margin: 0;
+
+              &::placeholder {
+                color: red;
+              }
             }
           }
 

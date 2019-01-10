@@ -151,38 +151,27 @@ $(document).ready(ev => {
   // finishing two-city section
 
   // starting form section
-  $('div.button button').click(function() {
-    // let inputArray = $('div.input-container input');
-    let inputArray = document.querySelectorAll('div.input-container input');
-    // console.log(inputArray);
-    var checkArray =[];
-    for (let i = 0; i < inputArray.length; i++) {
-      if (inputArray[i].value === '') {
-        // var checkArray =[];
-        // console.log(inputArray[1].value);
-        var checkedString = 'true';
-        inputArray[i].value = 'Please fill here!';
-        inputArray[i].style.color = 'red';
+  $('form').submit(function(event) {
+    event.preventDefault();
+    $('div.input-container input').filter(() => !this.value).attr('placeholder', 'please fill here').css('border', '1px solid red');
 
-        inputArray[i].addEventListener('click', function() {
-          inputArray[i].value = '';
-          inputArray[i].style.color = 'black';
-        })
-        checkArray.push(checkedString);
+
+    $('div.button button').click(function() {
+      if (!$('div.input-container input').val('')) {
+        // console.log($('div.input-container input').attr());
+        $('div.form-flex').css('filter', 'brightness(30%)');
+          $('div.full-form').css('display', 'block');
       }
+    })
 
-    }
-    let falseText = 'Please fill here!';
-    if (checkArray.length === 0 && $('div.input-container input').val() !== falseText) {
-      $('div.form-flex').css('filter', 'brightness(30%)');
-        $('div.full-form').css('display', 'block');
-
-        $('div.full-form button').click(function() {
+        $('div.full-form button').click(function(ev) {
+          ev.preventDefault();
           $('div.form-flex').css('filter', 'brightness(100%)');
           $('div.full-form').css('display', 'none');
+          // $('div.input-container input').val('');
           $('div.input-container input').val('');
+          $('div.input-container input').removeAttr('placeholder');
         })
-    }
 
   })
   // finishig form section
